@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selamat Ulang Tahun Adel - 15 Tahun</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+      <div class="loader">
+        <div class="cake">
+          <div class="candle"></div>
+          <div class="top"></div>
+          <div class="middle"></div>
+          <div class="bottom"></div>
+        </div>
+        <p>Menyiapkan kejutan untuk Adel...</p>
+      </div>
+    </div>
+
+    <!-- Background Elements -->
+    <div class="background-elements">
+      <div class="floating-heart heart-1"></div>
+      <div class="floating-heart heart-2"></div>
+      <div class="floating-heart heart-3"></div>
+      <div class="floating-heart heart-4"></div>
+      <div class="floating-heart heart-5"></div>
+      <div class="floating-star star-1"></div>
+      <div class="floating-star star-2"></div>
+      <div class="floating-star star-3"></div>
+    </div>
+
+    <!-- Music Player -->
+    <div class="music-player">
+      <button id="musicToggle" class="music-btn">
+        <i class="fas fa-music"></i>
+        <span class="music-text">Putar Lagu Romantis</span>
+      </button>
+      <audio id="bgMusic" loop>
+        <!-- Ganti dengan lagu romantis "ultahsong.mp3" -->
+        <source src="ultahsong.mp3" type="audio/mpeg" />
+        <source
+          src="https://assets.mixkit.co/music/preview/mixkit-romantic-moment-724.mp3"
+          type="audio/mpeg"
+          fallback
+        />
+      </audio>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Navigasi Menu -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <i class="fas fa-birthday-cake"></i>
+          <span>Adel's 15<sup>th</sup></span>
+        </div>
+
+        <ul class="nav-menu">
+          <li>
+            <a href="#home" class="nav-link active" data-section="home">
+              <i class="fas fa-home"></i>
+              <span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="#about" class="nav-link" data-section="about">
+              <i class="fas fa-user"></i>
+              <span>Tentang</span>
+            </a>
+          </li>
+          <li>
+            <a href="#memories" class="nav-link" data-section="memories">
+              <i class="fas fa-images"></i>
+              <span>Kenangan</span>
+            </a>
+          </li>
+          <li>
+            <a href="#gallery" class="nav-link" data-section="gallery">
+              <i class="fas fa-photo-video"></i>
+              <span>Galeri</span>
+            </a>
+          </li>
+          <li>
+            <a href="#wishes" class="nav-link" data-section="wishes">
+              <i class="fas fa-comment"></i>
+              <span>Ucapan</span>
+            </a>
+          </li>
+          <li>
+            <a href="#gift" class="nav-link" data-section="gift">
+              <i class="fas fa-gift"></i>
+              <span>Hadiah</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="mobile-menu-btn" id="mobileMenuBtn">
+          <div class="bar bar1"></div>
+          <div class="bar bar2"></div>
+          <div class="bar bar3"></div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay">
+      <div class="mobile-nav-content">
+        <div class="mobile-nav-header">
+          <div class="logo">
+            <i class="fas fa-birthday-cake"></i>
+            <span>Adel's 15<sup>th</sup></span>
+          </div>
+          <button class="close-mobile-nav" id="closeMobileNav">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <ul class="mobile-nav-menu">
+          <li>
+            <a href="#home" class="mobile-nav-link active">
+              <i class="fas fa-home"></i>
+              <span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="#about" class="mobile-nav-link">
+              <i class="fas fa-user"></i>
+              <span>Tentang</span>
+            </a>
+          </li>
+          <li>
+            <a href="#memories" class="mobile-nav-link">
+              <i class="fas fa-images"></i>
+              <span>Kenangan</span>
+            </a>
+          </li>
+          <li>
+            <a href="#gallery" class="mobile-nav-link">
+              <i class="fas fa-photo-video"></i>
+              <span>Galeri</span>
+            </a>
+          </li>
+          <li>
+            <a href="#wishes" class="mobile-nav-link">
+              <i class="fas fa-comment"></i>
+              <span>Ucapan</span>
+            </a>
+          </li>
+          <li>
+            <a href="#gift" class="mobile-nav-link">
+              <i class="fas fa-gift"></i>
+              <span>Hadiah</span>
+            </a>
+          </li>
+        </ul>
+        <div class="mobile-music-control">
+          <button id="mobileMusicToggle" class="music-btn">
+            <i class="fas fa-music"></i>
+            <span id="mobileMusicText">Putar Lagu</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Home Section -->
+      <section id="home" class="section active">
+        <div class="home-container">
+          <div class="home-content animate__animated animate__fadeInLeft">
+            <div class="birthday-badge">Sweet 15</div>
+            <h1 class="birthday-title">
+              <span class="title-line">Selamat Ulang Tahun</span>
+              <span class="highlight-name">Adel!</span>
+            </h1>
+
+            <p class="birthday-subtitle">
+              <i class="fas fa-heart"></i>
+              Happy 15th Birthday!
+              <i class="fas fa-heart"></i>
+            </p>
+
+            <div class="birthday-counter">
+              <div class="counter-item">
+                <div class="counter-icon">
+                  <i class="fas fa-cake-candles"></i>
+                </div>
+                <span class="counter-number">15</span>
+                <span class="counter-label">Tahun</span>
+              </div>
+              <div class="counter-item">
+                <div class="counter-icon">
+                  <i class="fas fa-heart"></i>
+                </div>
+                <span class="counter-number">5475</span>
+                <span class="counter-label">Hari</span>
+              </div>
+              <div class="counter-item">
+                <div class="counter-icon">
+                  <i class="fas fa-star"></i>
+                </div>
+                <span class="counter-number">15</span>
+                <span class="counter-label">Impian</span>
+              </div>
+              <div class="counter-item">
+                <div class="counter-icon">
+                  <i class="fas fa-smile"></i>
+                </div>
+                <span class="counter-number">∞</span>
+                <span class="counter-label">Kebahagiaan</span>
+              </div>
+            </div>
+
+            <div class="birthday-message">
+              <p>
+                Hari ini adalah hari spesialmu! Di usia 15 tahun, semoga setiap
+                langkahmu dipenuhi cahaya, setiap impianmu menjadi kenyataan,
+                dan setiap detik hidupmu dipenuhi cinta dan kebahagiaan.
+              </p>
+              <div class="message-signature">
+                <i class="fas fa-heart"></i>
+                <span>Untukmu yang tersayang</span>
+              </div>
+            </div>
+
+            <div class="home-buttons">
+              <a href="#gift" class="btn btn-primary btn-glow">
+                <i class="fas fa-gift"></i>
+                Buka Hadiah
+              </a>
+              <a href="#memories" class="btn btn-secondary">
+                <i class="fas fa-images"></i>
+                Tambah Kenangan
+              </a>
+              <a href="#wishes" class="btn btn-outline">
+                <i class="fas fa-pen"></i>
+                Tulis Ucapan
+              </a>
+            </div>
+          </div>
+
+          <div class="home-image animate__animated animate__fadeInRight">
+            <div class="image-frame">
+              <div class="frame-decoration frame-top"></div>
+              <div class="frame-decoration frame-right"></div>
+              <div class="frame-decoration frame-bottom"></div>
+              <div class="frame-decoration frame-left"></div>
+
+              <div class="floating-element balloon-1">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="floating-element balloon-2">
+                <i class="fas fa-star"></i>
+              </div>
+              <div class="floating-element balloon-3">
+                <i class="fas fa-birthday-cake"></i>
+              </div>
+
+              <div class="profile-image-container">
+                <img
+                  src="adel.png"
+                  alt="Adel"
+                  class="profile-image"
+                  onerror="this.src='adel.png'"
+                />
+                <div class="image-overlay">
+                  <div class="age-badge">15</div>
+                  <div class="floating-hearts">
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div class="image-caption">
+                <h3>Adel</h3>
+                <p>Sweet Fifteen Princess</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tentang Section -->
+      <section id="about" class="section">
+        <div class="about-container">
+          <div class="section-header">
+            <h2 class="section-title">
+              <span class="title-underline">Tentang</span>
+              <span class="highlight">Adel</span>
+            </h2>
+            <p class="section-subtitle">
+              Mengenal lebih dekat dengan gadis berusia 15 tahun yang spesial
+              ini
+            </p>
+          </div>
+
+          <div class="about-content">
+            <div class="about-image">
+              <div class="about-image-frame">
+                <img
+                  src="adel.png"
+                  alt="Adel Celebration"
+                  onerror="this.src='https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80'"
+                />
+                <div class="image-sticker sticker-1">
+                  <i class="fas fa-heart"></i>
+                </div>
+                <div class="image-sticker sticker-2">
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-text">
+              <div class="about-intro">
+                <h3>Halo, Saya Adel!</h3>
+                <p>
+                  Hari ini saya merayakan ulang tahun ke-15! Ini adalah momen
+                  spesial dalam perjalanan hidup saya sebagai remaja yang penuh
+                  semangat dan impian.
+                </p>
+              </div>
+
+              <div class="about-details">
+                <div class="detail-card">
+                  <div class="detail-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                  </div>
+                  <div class="detail-content">
+                    <h4>Pendidikan</h4>
+                    <p>Siswa SMP Nurul Halim Widasari.</p>
+                  </div>
+                </div>
+
+                <div class="detail-card">
+                  <div class="detail-icon">
+                    <i class="fas fa-palette"></i>
+                  </div>
+                  <div class="detail-content">
+                    <h4>Hobi & Minat</h4>
+                    <p>Nyanyi Di WC</p>
+                  </div>
+                </div>
+
+                <div class="detail-card">
+                  <div class="detail-icon">
+                    <i class="fas fa-heart"></i>
+                  </div>
+                  <div class="detail-content">
+                    <h4>Kepribadian</h4>
+                    <p>
+                      Periang, kreatif, bertanggung jawab, penyayang, dan mudah
+                      bergaul dengan siapa saja.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="detail-card">
+                  <div class="detail-icon">
+                    <i class="fas fa-music"></i>
+                  </div>
+                  <div class="detail-content">
+                    <h4>Musik Favorit</h4>
+                    <p>
+                      Menikmati lagu-lagu romantis, pop, dan soundtrack film
+                      favorit.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="music-section">
+                <h4><i class="fas fa-music"></i> Lagu Romantis Spesial</h4>
+                <div class="music-player-small">
+                  <button id="smallMusicToggle" class="btn btn-outline">
+                    <i class="fas fa-play"></i>
+                    Putar Lagu Terbaikmu Jangan lupa di klik
+                  </button>
+                  <p class="music-note">
+                    Lagu romantis khusus untuk hari spesialmu
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Kenangan Section -->
+      <section id="memories" class="section">
+        <div class="memories-container">
+          <div class="section-header">
+            <h2 class="section-title">
+              <span class="title-underline">Kenangan</span>
+              <span class="highlight">Spesial</span>
+            </h2>
+            <p class="section-subtitle">
+              Bagikan momen berharga bersama Adel dan beri rating dengan bintang
+            </p>
+          </div>
+
+          <!-- Upload Form -->
+          <div class="upload-form-container">
+            <div class="upload-form-header">
+              <i class="fas fa-cloud-upload-alt"></i>
+              <h3>Unggah Kenangan Baru</h3>
+            </div>
+
+            <form id="memoryForm" class="memory-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="memoryTitle">
+                    <i class="fas fa-heading"></i>
+                    Judul Kenangan
+                  </label>
+                  <input
+                    type="text"
+                    id="memoryTitle"
+                    placeholder="Contoh: Liburan ke Pantai Bersama"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="memoryDate">
+                    <i class="fas fa-calendar"></i>
+                    Tanggal
+                  </label>
+                  <input type="date" id="memoryDate" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="memoryDescription">
+                  <i class="fas fa-edit"></i>
+                  Deskripsi Kenangan
+                </label>
+                <textarea
+                  id="memoryDescription"
+                  rows="4"
+                  placeholder="Ceritakan kenangan spesial ini..."
+                  required
+                ></textarea>
+              </div>
+
+              <div class="form-group">
+                <label>
+                  <i class="fas fa-star"></i>
+                  Rating (1-5 Bintang)
+                </label>
+                <div class="star-rating">
+                  <span class="star" data-value="1"
+                    ><i class="far fa-star"></i
+                  ></span>
+                  <span class="star" data-value="2"
+                    ><i class="far fa-star"></i
+                  ></span>
+                  <span class="star" data-value="3"
+                    ><i class="far fa-star"></i
+                  ></span>
+                  <span class="star" data-value="4"
+                    ><i class="far fa-star"></i
+                  ></span>
+                  <span class="star" data-value="5"
+                    ><i class="far fa-star"></i
+                  ></span>
+                </div>
+                <input type="hidden" id="memoryRating" value="0" />
+                <div class="rating-text">Belum ada rating</div>
+              </div>
+
+              <div class="form-group">
+                <label for="memoryImage">
+                  <i class="fas fa-image"></i>
+                  Upload Foto
+                </label>
+                <div class="file-upload-area" id="fileUploadArea">
+                  <i class="fas fa-cloud-upload-alt"></i>
+                  <p>Klik untuk memilih foto atau drag & drop</p>
+                  <p class="file-info">Format: JPG, PNG, GIF (Max 5MB)</p>
+                </div>
+                <input type="file" id="memoryImage" accept="image/*" hidden />
+                <div class="image-preview" id="imagePreview"></div>
+              </div>
+
+              <div class="form-actions">
+                <button type="reset" class="btn btn-outline">
+                  <i class="fas fa-redo"></i>
+                  Reset
+                </button>
+                <button type="submit" class="btn btn-primary">
+                  <i class="fas fa-save"></i>
+                  Simpan Kenangan
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Memories List -->
+          <div class="memories-list-container">
+            <div class="memories-list-header">
+              <h3><i class="fas fa-history"></i> Kenangan Tersimpan</h3>
+              <div class="memories-stats">
+                <span class="stat-item">
+                  <i class="fas fa-images"></i>
+                  <span id="totalMemories">0</span> kenangan
+                </span>
+                <span class="stat-item">
+                  <i class="fas fa-star"></i>
+                  Rata-rata: <span id="averageRating">0.0</span>/5
+                </span>
+              </div>
+            </div>
+
+            <div class="memories-filter">
+              <button class="filter-btn active" data-filter="all">Semua</button>
+              <button class="filter-btn" data-filter="5">5 Bintang</button>
+              <button class="filter-btn" data-filter="4">4 Bintang</button>
+              <button class="filter-btn" data-filter="3">3 Bintang</button>
+              <button class="filter-btn" data-filter="2">2 Bintang</button>
+              <button class="filter-btn" data-filter="1">1 Bintang</button>
+            </div>
+
+            <div class="memories-grid" id="memoriesGrid">
+              <div class="no-memories">
+                <i class="fas fa-image"></i>
+                <h4>Belum ada kenangan</h4>
+                <p>Jadilah yang pertama berbagi kenangan spesial!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Galeri Section -->
+      <section id="gallery" class="section">
+        <div class="gallery-container">
+          <div class="section-header">
+            <h2 class="section-title">
+              <span class="title-underline">Galeri</span>
+              <span class="highlight">Foto</span>
+            </h2>
+            <p class="section-subtitle">
+              Koleksi foto-foto indah dari kenangan yang telah diunggah
+            </p>
+          </div>
+
+          <div class="gallery-views">
+            <div class="view-options">
+              <button class="view-btn active" data-view="grid">
+                <i class="fas fa-th"></i> Grid
+              </button>
+              <button class="view-btn" data-view="masonry">
+                <i class="fas fa-th-large"></i> Masonry
+              </button>
+            </div>
+
+            <div class="gallery-search">
+              <i class="fas fa-search"></i>
+              <input
+                type="text"
+                id="gallerySearch"
+                placeholder="Cari foto..."
+              />
+            </div>
+          </div>
+
+          <div class="gallery-content">
+            <!-- Grid View -->
+            <div class="gallery-grid-view active" id="gridView">
+              <div class="gallery-grid" id="galleryGrid">
+                <!-- Photos will be inserted here -->
+              </div>
+            </div>
+
+            <!-- Masonry View -->
+            <div class="gallery-masonry-view" id="masonryView">
+              <div class="masonry-grid" id="masonryGrid">
+                <!-- Masonry items will be inserted here -->
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-stats">
+            <div class="stat-card">
+              <i class="fas fa-images"></i>
+              <div>
+                <h4>Total Foto</h4>
+                <p id="totalPhotos">0</p>
+              </div>
+            </div>
+            <div class="stat-card">
+              <i class="fas fa-calendar"></i>
+              <div>
+                <h4>Periode</h4>
+                <p>2010 - 2023</p>
+              </div>
+            </div>
+            <div class="stat-card">
+              <i class="fas fa-heart"></i>
+              <div>
+                <h4>Foto Terfavorit</h4>
+                <p id="topRated">0</p>
+              </div>
+            </div>
+            <div class="stat-card">
+              <i class="fas fa-users"></i>
+              <div>
+                <h4>Kontributor</h4>
+                <p id="contributors">0</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ucapan Section -->
+      <section id="wishes" class="section">
+        <div class="wishes-container">
+          <div class="section-header">
+            <h2 class="section-title">
+              <span class="title-underline">Ucapan</span>
+              <span class="highlight">& Doa</span>
+            </h2>
+            <p class="section-subtitle">
+              Sampaikan harapan terbaikmu untuk Adel di ulang tahunnya yang
+              ke-15
+            </p>
+          </div>
+
+          <!-- Wish Form -->
+          <div class="wish-form-container">
+            <div class="wish-form-header">
+              <i class="fas fa-comment-medical"></i>
+              <h3>Tulis Ucapanmu</h3>
+            </div>
+
+            <form id="wishForm" class="wish-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="wishName">
+                    <i class="fas fa-user"></i>
+                    Nama Anda
+                  </label>
+                  <input
+                    type="text"
+                    id="wishName"
+                    placeholder="Masukkan nama"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="wishRelation">
+                    <i class="fas fa-users"></i>
+                    Hubungan
+                  </label>
+                  <select id="wishRelation">
+                    <option value="family">Keluarga</option>
+                    <option value="friend">Teman</option>
+                    <option value="relative">Kerabat</option>
+                    <option value="other">Lainnya</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="wishMessage">
+                  <i class="fas fa-edit"></i>
+                  Ucapan & Doa
+                </label>
+                <textarea
+                  id="wishMessage"
+                  rows="4"
+                  placeholder="Tuliskan ucapan dan doa terbaikmu untuk Adel..."
+                  required
+                ></textarea>
+                <div class="char-counter">
+                  <span id="charCount">0</span>/500 karakter
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button type="reset" class="btn btn-outline">
+                  <i class="fas fa-redo"></i>
+                  Reset
+                </button>
+                <button type="submit" class="btn btn-primary">
+                  <i class="fas fa-paper-plane"></i>
+                  Kirim Ucapan
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Wishes List -->
+          <div class="wishes-list-container">
+            <div class="wishes-list-header">
+              <h3><i class="fas fa-comments"></i> Ucapan dari Semua</h3>
+              <div class="wishes-stats">
+                <span class="stat-item">
+                  <i class="fas fa-comment"></i>
+                  <span id="totalWishes">1</span> ucapan
+                </span>
+                <button class="btn btn-outline btn-sm" id="refreshWishes">
+                  <i class="fas fa-sync"></i> Refresh
+                </button>
+              </div>
+            </div>
+
+            <div class="wishes-filter">
+              <button class="filter-btn active" data-filter="all">Semua</button>
+              <button class="filter-btn" data-filter="family">Keluarga</button>
+              <button class="filter-btn" data-filter="friend">Teman</button>
+              <button class="filter-btn" data-filter="relative">Kerabat</button>
+              <button class="filter-btn" data-filter="other">Lainnya</button>
+            </div>
+
+            <div class="wishes-grid" id="wishesGrid">
+              <!-- Default wish -->
+              <div class="wish-card">
+                <div class="wish-card-header">
+                  <div class="wish-author">
+                    <div class="author-avatar">
+                      <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="author-info">
+                      <h4>Keluarga Adel</h4>
+                      <span class="wish-date">Hari ini</span>
+                    </div>
+                  </div>
+                  <div class="wish-type family">
+                    <i class="fas fa-home"></i> Keluarga
+                  </div>
+                </div>
+                <div class="wish-card-body">
+                  <p class="wish-text">
+                    Selamat ulang tahun sayang! Semoga di usia 15 tahun ini,
+                    kamu semakin matang, bijaksana, dan selalu menjadi
+                    kebanggaan keluarga. Kami sangat menyayangimu!
+                  </p>
+                </div>
+                <div class="wish-card-footer">
+                  <div class="wish-actions">
+                    <button class="action-btn edit-btn">
+                      <i class="fas fa-edit"></i> Edit
+                    </button>
+                    <button class="action-btn delete-btn">
+                      <i class="fas fa-trash"></i> Hapus
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Hadiah Section -->
+      <section id="gift" class="section">
+        <div class="gift-container">
+          <div class="section-header">
+            <h2 class="section-title">
+              <span class="title-underline">Hadiah</span>
+              <span class="highlight">Spesial</span>
+            </h2>
+            <p class="section-subtitle">
+              Buka kado kejutan dan saksikan animasi menarik!
+            </p>
+          </div>
+
+          <div class="gift-content">
+            <!-- Gift Box -->
+            <div class="gift-box-container">
+              <div class="gift-box" id="giftBox">
+                <div class="gift-box-top">
+                  <div class="ribbon ribbon-1"></div>
+                  <div class="ribbon ribbon-2"></div>
+                  <div class="ribbon ribbon-3"></div>
+                  <div class="bow">
+                    <div class="bow-center"></div>
+                    <div class="bow-loop left"></div>
+                    <div class="bow-loop right"></div>
+                  </div>
+                </div>
+                <div class="gift-box-bottom"></div>
+                <div class="gift-label">
+                  <i class="fas fa-gift"></i>
+                  <span>Klik untuk membuka!</span>
+                </div>
+              </div>
+
+              <div class="gift-instruction">
+                <i class="fas fa-mouse-pointer"></i>
+                <p>Klik kado di atas untuk membuka kejutan spesial</p>
+              </div>
+            </div>
+
+            <!-- Gift Message -->
+            <div class="gift-message" id="giftMessage">
+              <div class="message-container">
+                <div class="message-header">
+                  <h3>
+                    <i class="fas fa-envelope-open"></i> Untuk Adel yang
+                    Tersayang
+                  </h3>
+                  <div class="message-date">15 Tahun | 2023</div>
+                </div>
+
+                <div class="message-content">
+                  <div class="message-text">
+                    <p>
+                      Di hari ulang tahunmu yang ke-15 ini, kami ingin
+                      mengucapkan:
+                    </p>
+
+                    <div class="message-highlight">
+                      <i class="fas fa-quote-left"></i>
+                      <h4>SELAMAT ULANG TAHUN ADEL!</h4>
+                      <i class="fas fa-quote-right"></i>
+                    </div>
+
+                    <p>
+                      Setiap tahun bersama kamu adalah anugerah. Kamu telah
+                      membawa begitu banyak kebahagiaan dan cinta ke dalam hidup
+                      kami.
+                    </p>
+
+                    <p>Di usia 15 tahun ini, semoga:</p>
+                    <ul class="wish-list">
+                      <li>
+                        <i class="fas fa-heart"></i> Semua impianmu menjadi
+                        kenyataan
+                      </li>
+                      <li>
+                        <i class="fas fa-star"></i> Kebahagiaan selalu
+                        menyertaimu
+                      </li>
+                      <li>
+                        <i class="fas fa-smile"></i> Setiap hari dipenuhi dengan
+                        tawa
+                      </li>
+                      <li>
+                        <i class="fas fa-music"></i> Lagu cinta terus mengiringi
+                        langkahmu
+                      </li>
+                      <li>
+                        <i class="fas fa-sun"></i> Masa depanmu cerah dan penuh
+                        harapan
+                      </li>
+                    </ul>
+
+                    <p>
+                      Teruslah bermimpi besar dan jadilah versi terbaik dari
+                      dirimu sendiri!
+                    </p>
+
+                    <div class="message-signature">
+                      <p>Dengan penuh cinta,</p>
+                      <h4>Semua yang menyayangimu</h4>
+                    </div>
+                  </div>
+
+                  <div class="message-envelope">
+                    <div class="envelope-flap"></div>
+                    <div class="envelope-body">
+                      <i class="fas fa-heart"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-actions">
+                <button class="btn btn-primary" id="celebrateBtn">
+                  <i class="fas fa-birthday-cake"></i>
+                  Rayakan Lagi!
+                </button>
+                <button class="btn btn-outline" id="playMusicBtn">
+                  <i class="fas fa-music"></i>
+                  Putar Lagu Romantis
+                </button>
+              </div>
+            </div>
+
+            <!-- Animation Area -->
+            <div class="animation-area" id="animationArea">
+              <!-- Animations will be generated here -->
+            </div>
+
+            <!-- Mini Gifts -->
+            <div class="mini-gifts">
+              <h4><i class="fas fa-gifts"></i> Hadiah Virtual Lainnya</h4>
+              <div class="gifts-grid">
+                <div class="mini-gift" data-gift="1">
+                  <div class="gift-icon">
+                    <i class="fas fa-heart"></i>
+                  </div>
+                  <p>Virtual Hug</p>
+                </div>
+                <div class="mini-gift" data-gift="2">
+                  <div class="gift-icon">
+                    <i class="fas fa-music"></i>
+                  </div>
+                  <p>Lagu Romantis</p>
+                </div>
+                <div class="mini-gift" data-gift="3">
+                  <div class="gift-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <p>Bintang Keberuntungan</p>
+                </div>
+                <div class="mini-gift" data-gift="4">
+                  <div class="gift-icon">
+                    <i class="fas fa-camera"></i>
+                  </div>
+                  <p>Kenangan Abadi</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-main">
+          <div class="footer-logo">
+            <i class="fas fa-birthday-cake"></i>
+            <div>
+              <h3>Adel's 15th Birthday</h3>
+              <p>Celebrating Sweet Fifteen</p>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <div class="link-group">
+              <h4>Menu</h4>
+              <a href="#home">Home</a>
+              <a href="#about">Tentang Adel</a>
+              <a href="#memories">Kenangan</a>
+              <a href="#gallery">Galeri</a>
+              <a href="#wishes">Ucapan</a>
+              <a href="#gift">Hadiah</a>
+            </div>
+
+            <div class="link-group">
+              <h4>Fitur</h4>
+              <a href="#memories">Upload Foto</a>
+              <a href="#wishes">Beri Ucapan</a>
+              <a href="#gallery">Lihat Galeri</a>
+              <a href="#gift">Buka Hadiah</a>
+            </div>
+
+            <div class="link-group">
+              <h4>Kontak</h4>
+              <a href="mailto:ucapan@adel15th.com">
+                <i class="fas fa-envelope"></i>
+                ucapan@adel15th.com
+              </a>
+              <div class="social-links">
+                <a href="#" class="social-link"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="#" class="social-link"
+                  ><i class="fab fa-whatsapp"></i
+                ></a>
+                <a href="#" class="social-link"
+                  ><i class="fab fa-facebook"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            Dibuat dengan <i class="fas fa-heart"></i> untuk merayakan ulang
+            tahun ke-15 Adel
+          </p>
+          <p class="copyright">
+            © 2023 Adel's 15th Birthday | All rights reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modals -->
+    <div class="modal" id="imageModal">
+      <div class="modal-content">
+        <button class="modal-close" id="closeModal">
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="modal-body">
+          <img id="modalImage" src="" alt="" />
+          <div class="image-info">
+            <h3 id="modalTitle"></h3>
+            <p id="modalDescription"></p>
+            <div class="image-meta">
+              <span class="meta-item">
+                <i class="fas fa-calendar"></i>
+                <span id="modalDate"></span>
+              </span>
+              <span class="meta-item">
+                <i class="fas fa-star"></i>
+                <span id="modalRating"></span> Bintang
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="editWishModal">
+      <div class="modal-content">
+        <button class="modal-close" id="closeEditModal">
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="modal-header">
+          <h3><i class="fas fa-edit"></i> Edit Ucapan</h3>
+        </div>
+        <div class="modal-body">
+          <form id="editWishForm">
+            <div class="form-group">
+              <label for="editWishName">Nama</label>
+              <input type="text" id="editWishName" required />
+            </div>
+            <div class="form-group">
+              <label for="editWishMessage">Ucapan</label>
+              <textarea id="editWishMessage" rows="4" required></textarea>
+              <div class="char-counter">
+                <span id="editCharCount">0</span>/500 karakter
+              </div>
+            </div>
+            <div class="form-actions">
+              <button type="button" class="btn btn-outline" id="cancelEdit">
+                Batal
+              </button>
+              <button type="submit" class="btn btn-primary">Simpan</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
